@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const C = ({ count }) => {
   return (
     <div className="row justify-content-center">

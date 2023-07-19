@@ -1,7 +1,12 @@
 import React from 'react'
+import C from './C';
 
-export const B = () => {
+const B = ({ count }) => {
   return (
-    <div>B</div>
-  )
+    <div className="B">
+      <C count={count}/>
+    </div>
+  );
 }
+
+export default B;
