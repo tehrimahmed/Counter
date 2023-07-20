@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import C from './C';
 
-const B = ({ count }) => {
+const B = () => {
   return (
     <div className="B">
-      <C count={count}/>
+      <C />
     </div>
   );
-}
+};
 
 export default B;
