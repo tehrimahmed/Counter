@@ -1,10 +1,13 @@
 import React from 'react';
-import A from './components/A'
+import A from './components/A';
+import { CounterProvider } from './components/CounterContext';
 
 function App() {
   return (
     <div className="App">
-      <A/>
+      <CounterProvider>
+        <A />
+      </CounterProvider>
     </div>
   );
 }

@@ -1,23 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { CounterContext } from './CounterContext';
 
 const C = () => {
+  const { count } = useContext(CounterContext);
+
   return (
-    <CounterContext.Consumer>
-      {({ count, increment, decrement }) => (
-        <div>
-          <h2 className="row justify-content-center" style={{ fontWeight: 'bold' }}>Count: {count}</h2>
-          <div className="row justify-content-center">
-            <div className="col-2 text-center">
-              <button className="btn btn-primary" onClick={decrement}>-</button>
-            </div>
-            <div className="col-2 text-center">
-              <button className="btn btn-primary" onClick={increment}>+</button>
-            </div>
-          </div>
-        </div>
-      )}
-    </CounterContext.Consumer>
+    <div className="row justify-content-center">
+      <div className="col-2 text-center">
+        <h2 style={{ fontWeight: 'bold' }}>Count: {count}</h2>
+      </div>
+    </div>
   );
 };
 
